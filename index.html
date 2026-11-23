@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grace | Portfolio</title>
+  <meta name="description" content="Portfolio of Grace: founder, builder and web developer in Osogbo, Nigeria.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top">Grace</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="https://www.github.com/GraceAg-1">GitHub</a></li>
+          <li><a href="mailto:adelekegrace2002@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="btn btn-ghost" type="button" aria-pressed="false">
+        <span id="theme-label">Dark mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <p class="eyebrow">Osogbo, Nigeria</p>
+        <h1 id="hero-title">Hi, I'm Grace. I build things that save people time.</h1>
+        <p class="lead">Founder, side-hustler and web developer in training. I turn everyday problems into services and simple, useful websites.</p>
+        <p><a class="btn btn-primary" href="#projects">See my work</a></p>
+      </div>
+      <img class="hero-image" src="avatar.svg" width="240" height="240"
+           alt="Illustration of a laptop showing a code bracket symbol, representing Grace's web development work">
+    </section>
+
+    <section id="about" class="section" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <p>By day I work a 9-to-5. Outside work I run AskHerlexa, an errand and delivery service for working mothers in Osogbo, and I'm developing a line of laptop and corporate bags. I'm learning front-end development so I can build the tools these ventures need.</p>
+      <p>This site is my Week 1-5 project: semantic HTML, custom CSS, Flexbox and Grid, Git, and vanilla JavaScript working with a live API.</p>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <div id="project-filters" class="filter-bar" role="group" aria-label="Filter projects by category"></div>
+      <p id="project-count" class="status-text" role="status"></p>
+      <div id="project-list" class="card-grid"></div>
+    </section>
+
+    <section id="repos" class="section" aria-labelledby="repos-title">
+      <h2 id="repos-title">Open-source explorer</h2>
+      <p>Public repositories loaded live from the GitHub API. Search by name or filter by language.</p>
+      <form class="repo-controls" role="search" aria-label="Search repositories">
+        <div class="field">
+          <label for="repo-search">Search repositories</label>
+          <input id="repo-search" type="search" placeholder="e.g. portfolio" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="repo-language">Language</label>
+          <select id="repo-language">
+            <option value="all">All languages</option>
+          </select>
+        </div>
+      </form>
+      <p id="repo-status" class="status-text" role="status">Loading repositories...</p>
+      <div id="repo-list" class="card-grid"></div>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name"
+                 aria-describedby="name-error" aria-invalid="false">
+          <p id="name-error" class="field-error"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email"
+                 aria-describedby="email-error" aria-invalid="false">
+          <p id="email-error" class="field-error"></p>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5"
+                    aria-describedby="message-error" aria-invalid="false"></textarea>
+          <p id="message-error" class="field-error"></p>
+        </div>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p id="form-status" class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Grace. Built with HTML, CSS and vanilla JavaScript.</p>
+  </footer>
+</body>
+</html>
